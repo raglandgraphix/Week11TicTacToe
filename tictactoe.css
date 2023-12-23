@@ -1,0 +1,48 @@
+body{
+    background-image: url(assets/cosmic.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.box{
+    height:167px;
+    font-size: 8em;
+    cursor: pointer;
+}
+.boxLetter{
+    text-align: center;
+}
+.player{
+    background-color: rgba(0, 0, 0, .3);
+}
+.textDropShadow{
+    text-shadow: 3px 3px 5px rgba(0, 200, 255, 1);
+}
+/* The winner has a gif that shows fireworks when you win */
+#winner{
+    background-image: url(assets/winner.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100%;
+    z-index: 1;
+    opacity:1;
+    position: absolute;
+    display: none;
+    top:0px;
+    text-align: center;
+}
+/* banner is the alert and it shows up when you win or tie. */
+#banner{
+    position: absolute;
+    width: 100%;
+    top: 400px;
+    text-align: center;
+    z-index: 2;
+    display: none;
+}
+#winner h1{
+    color: white;
+    margin-top: 300px;
+}

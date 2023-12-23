@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <link href="tictactoe.css" rel="stylesheet">
+    <script type="text/javascript" src="javascript/tictactoe.js" defer></script>
+    <title>Cosmic Tic Tac Toe</title>
+    
+</head>
+<body>
+    <!--Create a tic tac toe board that allows someone click one of the squares and put either an x or an o. 
+        Plan:
+        create a dive using bootstrap that is a square with a hash tag as the background. this will allow the board squares to be
+        put in over the top of it. The board will consist of bootstrap rows and columns that when clicked will put the appropriate value
+        in it.
+        javascript will be used to set the value. Use a variable that lets the X go first, when the square is clicked the function will
+        set the variabe to "o". 
+        Use CSS to set the styling.
+
+    -->
+    <!--The banner which is a required element-->
+    <div id="banner">
+        <div class="alert alert-success" role="alert">TIE GAME, PLEASE PLAY AGAIN! </div>
+     </div>
+     <!--a little extra the winner id has a background gif image that is fireworks-->
+    <div id="winner">
+    <h1>PLAYER ??? WINS!!!!</h1>
+ </div>
+<div class="container-fluid mt-5" >
+    <!-- The header -->
+    <div class="row mb-5 ">
+        <div class="col d-flex justify-content-center ">
+            <h1 class="text-white textDropShadow">COSMIC TIC TAC TOE</h1>
+        </div>
+    </div>
+  <div class="row">
+    <!-- The Player 1 score board that changes when its their turn -->
+    <div class="col-4">
+        <div class="row">
+            <div class="col text-white player ">
+                <h1 id="currentPlayer1" class="d-flex justify-content-center text-danger ">PLAYER 1 - X</h1>
+                <h3 class="d-flex justify-content-center">SCORE</h3>
+                <h2 id="score1" class="d-flex justify-content-center">0</h2>
+            </div>
+        </div>
+    </div>
+    <!-- The actual game board -->
+    <div id="board" class="col-4 bg-white">
+        <div class="row border-bottom border-2 border-danger">
+            <div id="1" class="col-4 border-end border-2 border-danger box d-flex justify-content-center align-items-center "></div>
+            <div id="2" class="col-4 border-end border-2 border-danger box d-flex justify-content-center align-items-center"></div>
+            <div id="3" class="col-4 box d-flex justify-content-center align-items-center"></div>
+        </div>
+        <div class="row border-bottom border-2 border-danger">
+            <div id="4" class="col-4 border-end border-2 border-danger box d-flex justify-content-center align-items-center"></div>
+            <div id="5" class="col-4 border-end border-2 border-danger box d-flex justify-content-center align-items-center"></div>
+            <div id="6" class="col-4 box d-flex justify-content-center align-items-center"></div>
+        </div>
+        <div class="row">
+            <div id="7" class="col-4 border-end border-2 border-danger box d-flex justify-content-center align-items-center"></div>
+            <div id="8" class="col-4 border-end border-2 border-danger box d-flex justify-content-center align-items-center"></div>
+            <div id="9" class="col-4 box d-flex justify-content-center align-items-center"></div>
+        </div>
+    </div>
+    <!-- The Player 2 score board which change color when it is their turn -->
+    <div class="col-4 ">
+        <div class="row">
+            <div class="col text-white player ">
+                <h1 id="currentPlayer2" class="d-flex justify-content-center ">PLAYER 2 - O</h1>
+                <h3 class="d-flex justify-content-center">SCORE</h3>
+                <h2 id="score2" class="d-flex justify-content-center">0</h2>
+            </div>
+        </div>
+    </div>
+  </div> 
+  <!-- The clear button -->
+  <div class="row mt-5">
+    <div class="col d-flex justify-content-center">
+        <button class="btn btn-primary" type="button" id="clear">Clear Board</button>
+    </div>
+  </div> 
+    
+</div>
+
+</body>
+</html>
